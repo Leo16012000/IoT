@@ -1,0 +1,14 @@
+.contacts {
+  margin-top: 300px;
+  display: flex;
+  justify-content: center;
+}
+.icon,
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.icon {
+  padding: 20px;
+}

@@ -1,0 +1,9 @@
+.todo {
+  margin-top: 350px;
+  display: flex;
+  flex-direction: column;
+}
+.todo Button {
+  margin: 10px;
+  width: 120px;
+}
