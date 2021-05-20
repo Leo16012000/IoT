@@ -5,6 +5,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import { useDispatch } from "react-redux";
+import { sizeStore } from "../redux/action";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -17,14 +19,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SimpleSelect(props) {
+  const dispatch = useDispatch();
   const selectList = props;
   console.log(selectList);
   const classes = useStyles();
   const [size, setSize] = React.useState("");
+  useEffect(() => {
+    dispatch(sizeStore(size));
+  }, [size]);
 
   const HandleChange = (event) => {
     setSize(event.target.value);
-    useEffect(() => {}, [size]);
   };
 
   return (
