@@ -22,11 +22,9 @@ export default function SimpleSelect(props) {
   const classes = useStyles();
   const [size, setSize] = React.useState("");
 
-  const handleChange = (event) => {
+  const HandleChange = (event) => {
     setSize(event.target.value);
-    useEffect(() => {
-      
-    }, [size]);
+    useEffect(() => {}, [size]);
   };
 
   return (
@@ -37,7 +35,7 @@ export default function SimpleSelect(props) {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={size}
-          onChange={handleChange}
+          onChange={HandleChange}
         >
           <MenuItem value={15}>15cm</MenuItem>
           <MenuItem value={20}>20cm</MenuItem>
