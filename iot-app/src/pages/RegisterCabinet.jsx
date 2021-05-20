@@ -1,5 +1,6 @@
 import { TextField } from "@material-ui/core";
 import React from "react";
+import SimpleSelect from "../components/SimpleSelect";
 
 function RegisterCabinet() {
   return (
@@ -10,6 +11,7 @@ function RegisterCabinet() {
       <p>Số điện thoại người nhận đồ</p>
       <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <p>Kích thước</p>
+      <SimpleSelect />
     </div>
   );
 }
